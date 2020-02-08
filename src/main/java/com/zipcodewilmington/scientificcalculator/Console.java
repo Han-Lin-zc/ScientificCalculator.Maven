@@ -16,6 +16,7 @@ public class Console {
     }
 
     public static String getStringInput(String prompt) {
+
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         String userInput = scanner.nextLine();
@@ -23,7 +24,11 @@ public class Console {
     }
 
     public static Integer getIntegerInput(String prompt) {
-        return null;
+
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
     }
 
     public static Double getDoubleInput(String prompt) {
