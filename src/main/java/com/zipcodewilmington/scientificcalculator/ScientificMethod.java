@@ -5,7 +5,6 @@ public class ScientificMethod {
     private static double j = 0;
     private static float k = 0;
     private boolean allowNegative;
-    private boolean isError;
     private boolean toggleNegative;
     private static TrigDisplayMode trigMode;
 
