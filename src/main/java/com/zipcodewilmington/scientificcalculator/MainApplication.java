@@ -15,6 +15,7 @@ public class MainApplication {
         double secondInput = 0;
         float thirdInput = 0;
         String input = "";
+        double store = 0;
         while (!input.equals("exit")){
              input = Console.getStringInput("Enter a command.");
             //switch on this value for all possible commands
@@ -27,10 +28,17 @@ public class MainApplication {
                             "STORE MATH, RESET RECALL DISPLAY TOGGLE_NEGATIVE");
                     break;
                 case "SWITCH_DISPLAY":
+                    input = Console.getStringInput("Input which display.");
+                    ScientificMethod.DisplayMode.valueOf(input);
+                    ScientificMethod.DisplayMode input1 = ScientificMethod.DisplayMode.valueOf(input);
+                    ScientificMethod.switchDisplayMode(input1);
+
                     break;
                 case "SWITCH_TRIG":
+
                     break;
                 case "STORE":
+                    store = answer;
                     break;
                 case "MATH":
                     System.out.println("+, -, *, /, square, sqrt, invsqrt," +
@@ -68,9 +76,10 @@ public class MainApplication {
                     System.out.println(answer);
                     break;
                 case "square":
-                    firstInput = Console.getDoubleInput("Input first number.");
+                    firstInput = Console.getDoubleInput("Input a number.");
                     answer = ScientificMethod.getSquare(firstInput);
                     System.out.println(answer);
+                    break;
                 case "invsqrt":
                     thirdInput = Console.getFloatInput("Input a number.");
                     answer = ScientificMethod.invSqrt(thirdInput);
@@ -82,6 +91,11 @@ public class MainApplication {
                     System.out.println(answer);
                     break;
                 case "sin":
+                    firstInput = Console.getDoubleInput("Input a number.");
+                    answer = ScientificMethod.getSin(firstInput);
+                    System.out.println(answer);
+                    break;
+
 
 
 

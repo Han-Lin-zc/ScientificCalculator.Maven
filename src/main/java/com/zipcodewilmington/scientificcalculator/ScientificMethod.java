@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class ScientificMethod {
-    private DisplayMode displayMode;
+    private static DisplayMode displayMode;
     private static double j = 0;
     private static float k = 0;
     private boolean allowNegative;
@@ -17,14 +17,6 @@ public class ScientificMethod {
 
     public void setK(float k) {
         this.k = k;
-    }
-
-    public boolean isError() {
-        return isError;
-    }
-
-    public void setError(boolean error) {
-        isError = error;
     }
 
     public boolean isAllowNegative() {
@@ -44,7 +36,7 @@ public class ScientificMethod {
     }
 
 
-    public void switchDisplayMode(DisplayMode value) {
+    public static void switchDisplayMode(DisplayMode value) {
 
         displayMode = value;
 

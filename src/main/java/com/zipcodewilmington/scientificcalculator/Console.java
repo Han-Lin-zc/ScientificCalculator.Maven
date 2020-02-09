@@ -57,5 +57,6 @@ public class Console {
         {
             return this.toString().toLowerCase().replace("_", " ");
         }
+
     }
 }
