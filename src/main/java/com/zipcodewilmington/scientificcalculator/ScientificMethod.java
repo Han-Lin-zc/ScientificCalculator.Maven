@@ -5,9 +5,8 @@ public class ScientificMethod {
     private static double j = 0;
     private static float k = 0;
     private boolean allowNegative;
-    private boolean isError;
     private boolean toggleNegative;
-    private static TrigDisplayMode trigMode;
+    private TrigDisplayMode trigMode;
 
     public TrigDisplayMode getTrigDisplayMode() { return trigMode;}
 
@@ -40,25 +39,18 @@ public class ScientificMethod {
     }
 
 
-    public static TrigDisplayMode getTrigMode() {
+    public  TrigDisplayMode getTrigMode() {
         return trigMode;
     }
 
-    public static void setDisplayMode(DisplayMode displayMode) {
-        ScientificMethod.displayMode = displayMode;
-    }
-
-    public static void setTrigMode(TrigDisplayMode trigMode) {
-        ScientificMethod.trigMode = trigMode;
-    }
 
     public static void switchDisplayMode(DisplayMode value) {
 
         displayMode = value;
 
-        switch (displayMode)
-        {
+        switch (displayMode) {
             case BINARY:
+
 
                 System.out.println("You are now in the binary display!");
                 break;
@@ -72,19 +64,17 @@ public class ScientificMethod {
                 System.out.println("You are now in the hexadecimal display!");
                 break;
         }
+    }
+   public void switchTrigDisplayMode(TrigDisplayMode value1){
 
-   // public static void switchTrigDisplayMode(TrigDisplayMode value1){
+        trigMode = value1;
 
-            //trigMode = value1;
+        switch (trigMode)
+        {
+            case RADIANS:
 
-            //switch (trigMode)
-            //{
-             //   case RADIANS:
-           //         Math.toRadians()
 
-         //   }
-       // }
-
+        }
     }
 
     public static double getSquare(double value) {
@@ -190,16 +180,20 @@ public class ScientificMethod {
         return factorial;
     }
 
-    public static enum DisplayMode
+    public enum DisplayMode
     {
         BINARY,
         OCTAL,
         DECIMAL,
         HEXADECIMAL;
+        public String toString()
+        {
+            return this.toString().toLowerCase().replace("_", " ");
+        }
 
     }
 
-    public static enum TrigDisplayMode
+    public enum TrigDisplayMode
     {
         RADIANS,
         DEGREES;

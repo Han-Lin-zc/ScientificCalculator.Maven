@@ -37,9 +37,11 @@ public class MainApplication {
                     break;
                 case "SWITCH_TRIG":
 
+
                     break;
                 case "STORE":
                     store = answer;
+                    System.out.println(store);
                     break;
                 case "MATH":
                     System.out.println("+, -, *, /, square, sqrt, invsqrt," +
@@ -48,9 +50,10 @@ public class MainApplication {
                 case "RESET":
                     break;
                 case "RECALL":
+                    System.out.println(store);
                     break;
                 case "DISPLAY":
-                    System.out.println(store);
+                    System.out.println(input);
                     break;
                 case "TOGGLE_NEGATIVE":
                     break;

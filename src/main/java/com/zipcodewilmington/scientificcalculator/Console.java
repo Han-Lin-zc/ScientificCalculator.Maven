@@ -41,7 +41,7 @@ public class Console {
         return userInput;
     }
 
-    public static enum Commands
+    public enum Commands
     {
         CLEAR,
         HELP,
