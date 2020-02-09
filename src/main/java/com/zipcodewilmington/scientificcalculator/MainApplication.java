@@ -41,7 +41,7 @@ public class MainApplication {
                     store = answer;
                     break;
                 case "MATH":
-                    System.out.println("+, -, *, /, square, sqrt, invsqrt," +
+                    System.out.println("+, -, *, /, square, sqrt, invSqrt," +
                             "sin, cos, tan, invSin, invCos, invTan, log, invLog, factorial");
                     break;
                 case "RESET":

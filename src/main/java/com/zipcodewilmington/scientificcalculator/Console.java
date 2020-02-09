@@ -58,6 +58,7 @@ public class Console {
         RECALL,
         DISPLAY,
         TOGGLE_NEGATIVE;
+
         public String toString()
         {
             return this.toString().toLowerCase().replace("_", " ");

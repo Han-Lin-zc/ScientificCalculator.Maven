@@ -73,11 +73,11 @@ public class ScientificMethod {
 
     public static float invSqrt(float value)
     {
-        float valuehalf = 0.5f * value;
+        float valueHalf = 0.5f * value;
         int i = Float.floatToIntBits(value);
         i = 0x5f3759df - (i >> 1);
         value = Float.intBitsToFloat(i);
-        value *= (1.5f - valuehalf * value * value);
+        value *= (1.5f - valueHalf * value * value);
         return value;
     }
 
