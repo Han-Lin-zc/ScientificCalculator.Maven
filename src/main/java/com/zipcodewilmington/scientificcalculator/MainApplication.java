@@ -80,7 +80,7 @@ public class MainApplication {
                     answer = ScientificMethod.getSquare(firstInput);
                     System.out.println(answer);
                     break;
-                case "invsqrt":
+                case "invSqrt":
                     thirdInput = Console.getFloatInput("Input a number.");
                     answer = ScientificMethod.invSqrt(thirdInput);
                     System.out.println(answer);
