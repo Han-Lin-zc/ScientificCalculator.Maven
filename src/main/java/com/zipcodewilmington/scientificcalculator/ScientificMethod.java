@@ -6,6 +6,10 @@ public class ScientificMethod {
     private static float k = 0;
     private boolean allowNegative;
     private boolean isError;
+    private boolean toggleNegative;
+    private static TrigDisplayMode trigMode;
+
+    public TrigDisplayMode getTrigDisplayMode() { return trigMode;}
 
     public DisplayMode getDisplayMode() {
         return displayMode;
@@ -36,6 +40,18 @@ public class ScientificMethod {
     }
 
 
+    public static TrigDisplayMode getTrigMode() {
+        return trigMode;
+    }
+
+    public static void setDisplayMode(DisplayMode displayMode) {
+        ScientificMethod.displayMode = displayMode;
+    }
+
+    public static void setTrigMode(TrigDisplayMode trigMode) {
+        ScientificMethod.trigMode = trigMode;
+    }
+
     public static void switchDisplayMode(DisplayMode value) {
 
         displayMode = value;
@@ -43,6 +59,7 @@ public class ScientificMethod {
         switch (displayMode)
         {
             case BINARY:
+
                 System.out.println("You are now in the binary display!");
                 break;
             case OCTAL:
@@ -56,6 +73,17 @@ public class ScientificMethod {
                 break;
         }
 
+   // public static void switchTrigDisplayMode(TrigDisplayMode value1){
+
+            //trigMode = value1;
+
+            //switch (trigMode)
+            //{
+             //   case RADIANS:
+           //         Math.toRadians()
+
+         //   }
+       // }
 
     }
 
@@ -73,11 +101,11 @@ public class ScientificMethod {
 
     public static float invSqrt(float value)
     {
-        float valuehalf = 0.5f * value;
+        float valueHalf = 0.5f * value;
         int i = Float.floatToIntBits(value);
         i = 0x5f3759df - (i >> 1);
         value = Float.intBitsToFloat(i);
-        value *= (1.5f - valuehalf * value * value);
+        value *= (1.5f - valueHalf * value * value);
         return value;
     }
 
@@ -170,4 +198,12 @@ public class ScientificMethod {
         HEXADECIMAL;
 
     }
+
+    public static enum TrigDisplayMode
+    {
+        RADIANS,
+        DEGREES;
+    }
+
+
 }

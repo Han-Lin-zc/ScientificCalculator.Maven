@@ -17,11 +17,12 @@ public class MainApplication {
         String input = "";
         double store = 0;
         while (!input.equals("exit")){
-             input = Console.getStringInput("Enter a command.");
+             input = Console.getStringInput("Enter a command in all CAPS example 'HELP'.");
             //switch on this value for all possible commands
             switch (input)
             {
                 case "CLEAR":
+                    store = 0;
                     break;
                 case "HELP":
                     System.out.println("CLEAR HELP SWITCH_DISPLAY SWITCH_TRIG " +
@@ -49,6 +50,7 @@ public class MainApplication {
                 case "RECALL":
                     break;
                 case "DISPLAY":
+                    System.out.println(store);
                     break;
                 case "TOGGLE_NEGATIVE":
                     break;
@@ -61,6 +63,7 @@ public class MainApplication {
                 case "-":
                     firstInput = Console.getDoubleInput("Input first number.");
                     secondInput = Console.getDoubleInput("Input second number.");
+                    answer = BasicFeatures.minus(firstInput, secondInput);
                     System.out.println(answer);
                     break;
                 case "*":

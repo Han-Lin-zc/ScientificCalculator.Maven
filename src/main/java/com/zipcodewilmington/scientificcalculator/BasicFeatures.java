@@ -15,9 +15,15 @@ public class BasicFeatures {
         return num1 * num2;
     }
 
-    public static double division(double num1, double num2) {
-        return num1 / num2;
-    }
+    public static double division(double num1, double num2)
+    {
+        if(num2 == 0){
+            System.out.println("Err");
+        }
+        else if( num2 != 0){
+            double num3 = num1 / num2;
+            return num3;
+      }  return 0;}
 
 //    public static void callAll(double num1, double num2) {
 //        Console.println( add(num1,num2)+ "" );
