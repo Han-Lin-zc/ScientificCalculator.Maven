@@ -14,7 +14,6 @@ public class BasicFeaturesTest {
     @Test
     public void testAddWithDecimal()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 3.478;
         double num2 = 4.947;
         double expected = 8.425;
@@ -26,7 +25,6 @@ public class BasicFeaturesTest {
     @Test
     public void testAddWithThousands()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 6478;
         double num2 = 2947;
         double expected = 9425;
@@ -38,7 +36,6 @@ public class BasicFeaturesTest {
     @Test
     public void testMinusWithDecimal()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 40.384;
         double num2 = 28.420;
         double expected = 11.964;
@@ -50,7 +47,6 @@ public class BasicFeaturesTest {
     @Test
     public void testMinusWithThousands()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 50384;
         double num2 = 44420;
         double expected = 5964;
@@ -62,7 +58,6 @@ public class BasicFeaturesTest {
     @Test
     public void testMultipleWithDecimal()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 34.384;
         double num2 = 10.420;
         double expected = 358.28128;
@@ -74,7 +69,6 @@ public class BasicFeaturesTest {
     @Test
     public void testMultipleWithThousands()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 27284;
         double num2 = 39475;
         double expected = 1077035900;
@@ -86,7 +80,6 @@ public class BasicFeaturesTest {
     @Test
     public void testDivisionWithDecimal()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 48.39;
         double num2 = 10.420;
         double expected = 4.64395393;
@@ -98,7 +91,6 @@ public class BasicFeaturesTest {
     @Test
     public void testDivisionWithThousands()
     {
-        BasicFeatures add1 = new BasicFeatures();
         double num1 = 3849339;
         double num2 = 29420;
         double expected = 130.840891;

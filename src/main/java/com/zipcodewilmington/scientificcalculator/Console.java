@@ -15,26 +15,32 @@ public class Console {
         print(output + "\n", args);
     }
 
-    public static String getStringInput(String prompt) {
+    public static String getStringInput(String prompt)
+    {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         String userInput = scanner.nextLine();
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        return null;
+    public static Integer getIntegerInput(String prompt)
+    {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
     }
 
-    public static Double getDoubleInput(String prompt) {
-
+    public static Double getDoubleInput(String prompt)
+    {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         double userInput = scanner.nextDouble();
         return userInput;
     }
-    public static Float getFloatInput(String prompt) {
 
+    public static Float getFloatInput(String prompt)
+    {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         float userInput = scanner.nextFloat();
@@ -53,6 +59,7 @@ public class Console {
         RECALL,
         DISPLAY,
         TOGGLE_NEGATIVE;
+
         public String toString()
         {
             return this.toString().toLowerCase().replace("_", " ");
