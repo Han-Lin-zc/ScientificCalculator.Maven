@@ -13,6 +13,7 @@ public class MainApplication {
         double answer = 0;
         double firstInput = 0;
         double secondInput = 0;
+        float thirdInput = 0;
         String input = "";
         while (!input.equals("exit")){
              input = Console.getStringInput("Enter a command.");
@@ -22,6 +23,8 @@ public class MainApplication {
                 case "CLEAR":
                     break;
                 case "HELP":
+                    System.out.println("CLEAR HELP SWITCH_DISPLAY SWITCH_TRIG " +
+                            "STORE MATH, RESET RECALL DISPLAY TOGGLE_NEGATIVE");
                     break;
                 case "SWITCH_DISPLAY":
                     break;
@@ -30,7 +33,7 @@ public class MainApplication {
                 case "STORE":
                     break;
                 case "MATH":
-                    System.out.println("add, subtract, multiply, divide, square, sqrt, invsqrt," +
+                    System.out.println("+, -, *, /, square, sqrt, invsqrt," +
                             "sin, cos, tan, invSin, invCos, invTan, log, invLog, natLog, invNatLog, factorial");
                     break;
                 case "RESET":
@@ -41,11 +44,47 @@ public class MainApplication {
                     break;
                 case "TOGGLE_NEGATIVE":
                     break;
-                case "add":
+                case "+":
                   firstInput = Console.getDoubleInput("Input first number. ");
                   secondInput = Console.getDoubleInput("Input second number. ");
                   answer = BasicFeatures.add(firstInput, secondInput);
                   System.out.println(answer);
+                  break;
+                case "-":
+                    firstInput = Console.getDoubleInput("Input first number.");
+                    secondInput = Console.getDoubleInput("Input second number.");
+                    System.out.println(answer);
+                    break;
+                case "*":
+                    firstInput = Console.getDoubleInput("Input first number.");
+                    secondInput = Console.getDoubleInput("Input second number.");
+                    answer = BasicFeatures.multiple(firstInput, secondInput);
+                    System.out.println(answer);
+                    break;
+                case "/":
+                    firstInput = Console.getDoubleInput("Input first number.");
+                    secondInput = Console.getDoubleInput("Input second number.");
+                    answer = BasicFeatures.division(firstInput, secondInput);
+                    System.out.println(answer);
+                    break;
+                case "square":
+                    firstInput = Console.getDoubleInput("Input first number.");
+                    answer = ScientificMethod.getSquare(firstInput);
+                    System.out.println(answer);
+                case "invsqrt":
+                    thirdInput = Console.getFloatInput("Input a number.");
+                    answer = ScientificMethod.invSqrt(thirdInput);
+                    System.out.println(answer);
+                    break;
+                case "sqrt":
+                    thirdInput = Console.getFloatInput("Input a number.");
+                    answer = ScientificMethod.sqrt(thirdInput);
+                    System.out.println(answer);
+                    break;
+                case "sin":
+
+
+
 
             }
 

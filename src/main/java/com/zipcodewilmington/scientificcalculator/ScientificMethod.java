@@ -1,7 +1,9 @@
+package com.zipcodewilmington.scientificcalculator;
+
 public class ScientificMethod {
     private DisplayMode displayMode;
-    private double j = 0;
-    private float k = 0;
+    private static double j = 0;
+    private static float k = 0;
     private boolean allowNegative;
     private boolean isError;
 
@@ -65,18 +67,16 @@ public class ScientificMethod {
 
     }
 
-    public String getSquare(double value) {
-        String Total = "";
+    public static double getSquare(double value) {
+        double Total = 0;
         j = value;
         Total += value * value;
         return Total;
     }
 
-    public float sqrt(float value)
+    public static double sqrt(double value)
     {
-
-     k = value;
-     return value;
+     return Math.sqrt(value);
     }
 
     public static float invSqrt(float value)
@@ -89,7 +89,7 @@ public class ScientificMethod {
         return value;
     }
 
-    public double getSin(double value)
+    public static double getSin(double value)
     {
         double degrees = value;
 
@@ -98,7 +98,7 @@ public class ScientificMethod {
         return sinValue;
     }
 
-    public double getCos(double value)
+    public static double getCos(double value)
     {
         double degrees = value;
 
@@ -107,7 +107,7 @@ public class ScientificMethod {
         return cosValue;
     }
 
-    public double getTan(double value)
+    public static double getTan(double value)
     {
         double degrees = value;
 
@@ -117,7 +117,7 @@ public class ScientificMethod {
 
     }
 
-    public double getInverseSin(double value)
+    public static double getInverseSin(double value)
     {
         double degrees = value;
 
@@ -127,7 +127,7 @@ public class ScientificMethod {
 
     }
 
-    public double getInverseCos(double value)
+    public static double getInverseCos(double value)
     {
         double degrees = value;
 
@@ -137,7 +137,7 @@ public class ScientificMethod {
 
     }
 
-    public double getInverseTan(double value)
+    public static double getInverseTan(double value)
     {
         double degrees = value;
 
@@ -147,7 +147,7 @@ public class ScientificMethod {
 
     }
 
-    public double getLog(double value)
+    public static double getLog(double value)
     {
         double degrees = value;
         double radians = Math.toRadians(degrees);

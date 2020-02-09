@@ -33,6 +33,13 @@ public class Console {
         double userInput = scanner.nextDouble();
         return userInput;
     }
+    public static Float getFloatInput(String prompt) {
+
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        float userInput = scanner.nextFloat();
+        return userInput;
+    }
 
     public static enum Commands
     {
