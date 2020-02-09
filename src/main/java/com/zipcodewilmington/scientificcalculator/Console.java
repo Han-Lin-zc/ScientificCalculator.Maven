@@ -33,4 +33,22 @@ public class Console {
         double userInput = scanner.nextDouble();
         return userInput;
     }
+
+    public static enum Commands
+    {
+        CLEAR,
+        HELP,
+        SWITCH_DISPLAY,
+        SWITCH_TRIG,
+        STORE,
+        MATH,
+        RESET,
+        RECALL,
+        DISPLAY,
+        TOGGLE_NEGATIVE;
+        public String toString()
+        {
+            return this.toString().toLowerCase().replace("_", " ");
+        }
+    }
 }

@@ -1,12 +1,12 @@
 public class ScientificMethod {
-    private int i = 0;
+    private DisplayMode displayMode;
     private double j = 0;
     private float k = 0;
     private boolean allowNegative;
     private boolean isError;
 
-    public int getI() {
-        return i;
+    public DisplayMode getDisplayMode() {
+        return displayMode;
     }
 
     public float getK() {
@@ -41,28 +41,27 @@ public class ScientificMethod {
         this.j = j;
     }
 
-    public void setI(int i) {
-        this.i = i;
-    }
 
-    public void switchDisplayMode(int value) {
-        int binary = 1;
-        int octal = 2;
-        int decimal = 3;
-        int hexadecimal = 4;
-        i = value;
+    public void switchDisplayMode(DisplayMode value) {
 
-        if (i == binary) {
-            System.out.println("You are now in the binary display!");
-        } else if (i == octal) {
-            System.out.println("You are now in the octal display!");
-        } else if (i == decimal) {
-            System.out.println("You are now in the decimal display!");
-        } else if (i == hexadecimal) {
-            System.out.println("You are now in the hexadecimal display!");
-        } else {
-            System.out.println("That is not a valid entry!");
+        displayMode = value;
+
+        switch (displayMode)
+        {
+            case BINARY:
+                System.out.println("You are now in the binary display!");
+                break;
+            case OCTAL:
+                System.out.println("You are now in the octal display!");
+                break;
+            case DECIMAL:
+                System.out.println("You are now in the decimal display!");
+                break;
+            case HEXADECIMAL:
+                System.out.println("You are now in the hexadecimal display!");
+                break;
         }
+
 
     }
 
@@ -157,5 +156,12 @@ public class ScientificMethod {
 
     }
 
+    public static enum DisplayMode
+    {
+        BINARY,
+        OCTAL,
+        DECIMAL,
+        HEXADECIMAL;
 
+    }
 }

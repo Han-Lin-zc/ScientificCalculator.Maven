@@ -8,8 +8,8 @@ public class ScientificMethodTest {
     public void TestswitchDisplayMode()
     {
         ScientificMethod scientificMethod1 = new ScientificMethod();
-        scientificMethod1.switchDisplayMode(1);
-        assertEquals(1, scientificMethod1.getI());
+        scientificMethod1.switchDisplayMode(ScientificMethod.DisplayMode.BINARY);
+        assertEquals(ScientificMethod.DisplayMode.BINARY, scientificMethod1.getDisplayMode());
     }
 
     @Test

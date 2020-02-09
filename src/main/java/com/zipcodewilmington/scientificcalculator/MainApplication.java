@@ -1,5 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,16 +9,41 @@ import java.util.Scanner;
  */
 public class MainApplication {
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-        String s = Console.getStringInput("Enter a string");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
+        double answer = 0;
+        double firstInput = 0;
+        double secondInput = 0;
+        String input = "";
+        while (!input.equals("exit")){
+             input = Console.getStringInput("Enter a command.");
+            //switch on this value for all possible commands
+            switch (input)
+            {
+                case "CLEAR":
+                    break;
+                case "HELP":
+                    break;
+                case "SWITCH_DISPLAY":
+                    break;
+                case "SWITCH_TRIG":
+                    break;
+                case "STORE":
+                    break;
+                case "MATH":
+                    System.out.println("add, subtract, multiply, divide, square, sqrt, invsqrt," +
+                            "sin, cos, tan, invSin, invCos, invTan, log, invLog, natLog, invNatLog, factorial");
+                    break;
+                case "RESET":
+                    break;
+                case "RECALL":
+                    break;
+                case "DISPLAY":
+                    break;
+                case "TOGGLE_NEGATIVE":
+                    break;
 
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
+            }
+
+        }
     }
-    public static void main(String[] arges) {
-        ArrayList<String> input = new ArrayList<String>();
-    }
+
 }
