@@ -142,10 +142,24 @@ public class ScientificMethod {
     public static double getLog(double value)
     {
         double degrees = value;
-        double radians = Math.toRadians(degrees);
-        double logValue = Math.log(value);
+        double logValue = Math.log(degrees);
         return logValue;
 
+    }
+
+    public static double getInverseLog(double value)
+    {
+     double invLogValue = Math.exp(Math.log(value));
+     return invLogValue;
+    }
+
+    public static double getFactorial(double factorial, double value)
+    {
+        for (int i = 1; i <= value; ++i )
+        {
+           factorial *= i;
+        }
+        return factorial;
     }
 
     public static enum DisplayMode
