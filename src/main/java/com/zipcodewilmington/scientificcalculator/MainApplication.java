@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Created by leon on 2/9/18.
  */
 public class MainApplication {
+
     public static void main(String[] args) {
         double answer = 0;
         double firstInput = 0;
@@ -40,6 +41,11 @@ public class MainApplication {
                     break;
                 case "TOGGLE_NEGATIVE":
                     break;
+                case "add":
+                  firstInput = Console.getDoubleInput("Input first number. ");
+                  secondInput = Console.getDoubleInput("Input second number. ");
+                  answer = BasicFeatures.add(firstInput, secondInput);
+                  System.out.println(answer);
 
             }
 
