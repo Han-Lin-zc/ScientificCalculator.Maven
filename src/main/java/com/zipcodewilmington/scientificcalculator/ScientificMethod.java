@@ -39,7 +39,7 @@ public class ScientificMethod {
     }
 
 
-    public  TrigDisplayMode getTrigMode() {
+    public TrigDisplayMode getTrigMode() {
         return trigMode;
     }
 
