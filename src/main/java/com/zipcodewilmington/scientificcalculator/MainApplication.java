@@ -20,7 +20,7 @@ public class MainApplication {
 
         while (!input.equals("exit")) {
 
-            input = Console.getStringInput("Enter a command in all CAPS example 'HELP'.");
+            input = Console.getStringInput("Enter a command.");
 
              //switch on this value for all possible commands
             switch (input.toLowerCase().replace("_", " "))
