@@ -30,18 +30,20 @@ public class MainApplication {
                     break;
 
                 case "help":
-                    System.out.println("CLEAR HELP SWITCH_DISPLAY SWITCH_TRIG " +
-                            "STORE MATH RESET RECALL DISPLAY TOGGLE_NEGATIVE");
+                    System.out.println("clear, help, switch display, switch trig, " +
+                            "store, math, reset, recall, display, toggle negative.");
                     break;
 
                 case "switch display":
-                    input = Console.getStringInput("Input which display.");
+                    input = Console.getStringInput("Input which display.").toUpperCase();
                     ScientificMethod.DisplayMode.valueOf(input);
                     ScientificMethod.DisplayMode input1 = ScientificMethod.DisplayMode.valueOf(input);
                     ScientificMethod.switchDisplayMode(input1);
                     break;
 
                 case "switch trig":
+                    ScientificMethod.switchTrigDisplayMode(ScientificMethod.getTrigMode() == ScientificMethod.TrigDisplayMode.DEGREES ? ScientificMethod.TrigDisplayMode.RADIANS : ScientificMethod.TrigDisplayMode.DEGREES);
+                    System.out.println(ScientificMethod.getTrigMode());
 
                     break;
 
@@ -120,37 +122,37 @@ public class MainApplication {
 
                 case "sin":
                     firstInput = Console.getDoubleInput("Input a number.");
-                    answer = ScientificMethod.getSin(firstInput);
+                    answer = ScientificMethod.getSin(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 
                 case "cos":
                     firstInput = Console.getDoubleInput("Input a number");
-                    answer = ScientificMethod.getCos(firstInput);
+                    answer = ScientificMethod.getCos(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 
                 case "tan":
                     firstInput = Console.getDoubleInput("Input a number");
-                    answer = ScientificMethod.getTan(firstInput);
+                    answer = ScientificMethod.getTan(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 
                 case "invsin":
                     firstInput = Console.getDoubleInput("Input a number");
-                    answer = ScientificMethod.getInverseSin(firstInput);
+                    answer = ScientificMethod.getInverseSin(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 
                 case "invcos":
                     firstInput = Console.getDoubleInput("Input a number");
-                    answer = ScientificMethod.getInverseCos(firstInput);
+                    answer = ScientificMethod.getInverseCos(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 
                 case "invtan":
                     firstInput = Console.getDoubleInput("Input a number");
-                    answer = ScientificMethod.getInverseTan(firstInput);
+                    answer = ScientificMethod.getInverseTan(firstInput, ScientificMethod.getTrigMode());
                     System.out.println(answer);
                     break;
 

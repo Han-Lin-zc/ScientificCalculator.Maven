@@ -56,7 +56,7 @@ public class ScientificMethodTest {
     @Test
     public void testGetSin1()
     {
-        double actual = ScientificMethod.getSin(60);
+        double actual = ScientificMethod.getSin(60, ScientificMethod.TrigDisplayMode.DEGREES);
         assertEquals(0.866025403784439, actual, 15);
     }
 
@@ -72,7 +72,7 @@ public class ScientificMethodTest {
     @Test
     public void testGetCos1()
     {
-        double actual = ScientificMethod.getCos(60);
+        double actual = ScientificMethod.getCos(60, ScientificMethod.TrigDisplayMode.DEGREES);
         assertEquals(0.5, actual, 15);
     }
 
@@ -88,7 +88,7 @@ public class ScientificMethodTest {
     @Test
     public void testGetTan1()
     {
-        double actual = ScientificMethod.getTan(60);
+        double actual = ScientificMethod.getTan(60, ScientificMethod.TrigDisplayMode.DEGREES);
         assertEquals(1.732050807568877, actual, 15);
     }
 
@@ -103,7 +103,7 @@ public class ScientificMethodTest {
     @Test
     public void testGetInverseSin1()
     {
-        double actual = ScientificMethod.getInverseSin(0.0274155677808);
+        double actual = ScientificMethod.getInverseSin(0.0274155677808, ScientificMethod.TrigDisplayMode.DEGREES);
         assertEquals(0.027419003260, actual, 15);
     }
 
@@ -119,7 +119,7 @@ public class ScientificMethodTest {
     @Test
     public void testGetInverseCos1()
     {
-        double actual = ScientificMethod.getInverseCos(10);
+        double actual = ScientificMethod.getInverseCos(10, ScientificMethod.TrigDisplayMode.DEGREES);
         assertEquals(1.3953649341158527, actual, 15);
     }
 
@@ -129,6 +129,10 @@ public class ScientificMethodTest {
     {
         double actual = ScientificMethod.getInverseCos(20);
         assertEquals(1.2142222619432261, actual, 15);
+
+        double actual = ScientificMethod.getInverseTan(30, ScientificMethod.TrigDisplayMode.DEGREES);
+        assertEquals(0.48234790710102493, actual, 15);
+
     }
 
 
