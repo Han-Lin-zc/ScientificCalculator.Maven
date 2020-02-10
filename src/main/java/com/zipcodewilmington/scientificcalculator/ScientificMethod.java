@@ -6,7 +6,7 @@ public class ScientificMethod {
     private static float k = 0;
     private boolean allowNegative;
     private boolean toggleNegative;
-    private TrigDisplayMode trigMode;
+    private static TrigDisplayMode trigMode = TrigDisplayMode.DEGREES;
 
     public TrigDisplayMode getTrigDisplayMode() { return trigMode;}
 
@@ -39,7 +39,7 @@ public class ScientificMethod {
     }
 
 
-    public TrigDisplayMode getTrigMode() {
+    public static TrigDisplayMode getTrigMode() {
         return trigMode;
     }
 
@@ -50,7 +50,6 @@ public class ScientificMethod {
 
         switch (displayMode) {
             case BINARY:
-
 
                 System.out.println("You are now in the binary display!");
                 break;
@@ -65,13 +64,18 @@ public class ScientificMethod {
                 break;
         }
     }
-   public void switchTrigDisplayMode(TrigDisplayMode value1){
+   public static void switchTrigDisplayMode(TrigDisplayMode value1){
 
         trigMode = value1;
 
         switch (trigMode)
         {
             case RADIANS:
+                System.out.println("You are now in radians.");
+                break;
+            case DEGREES:
+                System.out.println("You are now in degrees.");
+                break;
 
 
         }
@@ -99,61 +103,87 @@ public class ScientificMethod {
         return value;
     }
 
-    public static double getSin(double value)
+    public static double getSin(double value, TrigDisplayMode trigDisplay)
     {
-        double degrees = value;
-
-        double radians = Math.toRadians(degrees);
-        double sinValue = Math.sin(radians);
-        return sinValue;
+        if (trigDisplay == TrigDisplayMode.DEGREES){
+            double degrees = value;
+            double radians = Math.toRadians(degrees);
+            double sinValue = Math.sin(radians);
+            return sinValue;
+        } else {
+            double sinValue = Math.sin(value);
+            return sinValue; }
     }
 
-    public static double getCos(double value)
+    public static double getCos(double value, TrigDisplayMode trigDisplay)
     {
-        double degrees = value;
-
-        double radians = Math.toRadians(degrees);
-        double cosValue = Math.cos(radians);
-        return cosValue;
-    }
-
-    public static double getTan(double value)
-    {
-        double degrees = value;
-
-        double radians = Math.toRadians(degrees);
-        double tanValue = Math.tan(radians);
-        return tanValue;
+       if (trigDisplay == TrigDisplayMode.DEGREES){
+           double degrees = value;
+           double radians = Math.toRadians(degrees);
+           double cosValue = Math.cos(radians);
+           return  cosValue;
+       } else {
+           double cosValue = Math.cos(value);
+           return cosValue; }
 
     }
 
-    public static double getInverseSin(double value)
+    public static double getTan(double value, TrigDisplayMode trigDisplay)
     {
-        double degrees = value;
-
-        double radians = Math.toRadians(degrees);
-        double inverseSinValue = Math.asin(radians);
-        return inverseSinValue;
+        if (trigDisplay == TrigDisplayMode.DEGREES){
+            double degrees = value;
+            double radians = Math.toRadians(degrees);
+            double tanValue = Math.tan(radians);
+            return tanValue;
+        } else {
+            double tanValue = Math.tan(value);
+            return tanValue; }
 
     }
 
-    public static double getInverseCos(double value)
+    public static double getInverseSin(double value, TrigDisplayMode trigDisplay)
     {
-        double degrees = value;
+        if (trigDisplay == TrigDisplayMode.DEGREES) {
+            double degrees = value;
 
+            double radians = Math.toRadians(degrees);
+            double inverseSinValue = Math.asin(radians);
+            return inverseSinValue;
+        }
+            else{
+                double inverseSinValue = Math.asin(value);
+                return inverseSinValue;
+
+    }
+
+    }
+
+    public static double getInverseCos(double value, TrigDisplayMode trigDisplay)
+    {
+        if (trigDisplay == TrigDisplayMode.DEGREES){
+        double degrees = value;
         double radians = Math.toRadians(degrees);
         double inverseCosValue = Math.acos(radians);
         return inverseCosValue;
-
+        }
+        else {
+            double inverseCosValue = Math.acos(value);
+            return inverseCosValue;
+        }
     }
 
-    public static double getInverseTan(double value)
+    public static double getInverseTan(double value, TrigDisplayMode trigDisplay)
     {
+        if (trigDisplay == TrigDisplayMode.DEGREES){
         double degrees = value;
-
         double radians = Math.toRadians(degrees);
         double inverseTanValue = Math.atan(radians);
         return inverseTanValue;
+        }
+        else {
+            double inverseTanValue = Math.atan(value);
+            return inverseTanValue;
+        }
 
     }
 
